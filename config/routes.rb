@@ -1,4 +1,6 @@
 Aitfc::Application.routes.draw do
+  resources :events
+
   devise_scope :user do; root to: 'devise/sessions#new'; end
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
