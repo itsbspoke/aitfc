@@ -66,3 +66,5 @@ group :test do
   gem "forgery"
   gem "launchy"
 end
+
+gem "codeclimate-test-reporter", group: :test, require: nil
