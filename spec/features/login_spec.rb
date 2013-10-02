@@ -42,8 +42,28 @@ end
 
 describe "Logging in" do
 
+
+  before(:each) do
+
+  end
+
   context "in error cases" do
 
+    it "should not allow a login" do
+      User.destroy_all
+      signup("jim@jimvanfleet.com")
+      logout
+      visit root_path
+      click_link "Sign In"
+      lambda{
+        within("#new_user") do
+          #fill_in "Email", :with => Forgery(:internet).email_address
+          fill_in "Password", :with => "12345678"
+          click_button "Sign in"
+        end
+        expect(page).to have_content("Invalid")
+      }.should_not change(User, :count)
+    end
   end
 
   context "when successful" do
