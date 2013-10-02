@@ -14,5 +14,8 @@ describe Event do
       dup_event = build(:event, :title => event.title)
       dup_event.should_not be_valid
     end
+    it "should require a title" do
+      build(:event, :title => nil).should_not be_valid
+    end
   end
 end
