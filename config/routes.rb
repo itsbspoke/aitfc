@@ -1,4 +1,5 @@
 Aitfc::Application.routes.draw do
+  get "welcome/index"
   root to: "events#index"
 
   resources :events
