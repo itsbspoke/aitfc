@@ -1,0 +1,8 @@
+<tr>
+  <td><%= event_row.start_time %></td>
+  <td><%= event_row.venue %></td>
+  <td><%= event_row.title %></td>
+  <td><%= link_to 'Show', event_row %></td>
+  <td><%= link_to 'Edit', edit_event_path(event_row) %></td>
+  <td><%= link_to 'Destroy', event_row, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
