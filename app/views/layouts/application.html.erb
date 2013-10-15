@@ -22,6 +22,10 @@
             <span class="icon-bar">
               <%= link_to "Profile", user_path(current_user) %>
             </span>
+            <span class="icon-bar">
+              <%= link_to "Social Accounts", authentications_path %>
+            </span>
+
         <% else %>
             <span class="icon-bar">
               <%= link_to "Sign In", new_user_session_path %>
