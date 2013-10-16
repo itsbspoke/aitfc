@@ -15,7 +15,14 @@ describe "Editing a story" do
 
   it "should have a link to edit the user's story" do
     click_link "Profile"
-    expect(page).to have_content("a", href: edit_user_story_path(@user))
+    save_and_open_page
+    expect(page).to have_link("edit-story")
+  end
+
+  it "should not have a link to edit the user's story if I'm not logged in" do
+    logout
+    visit(user_path(@user))
+    expect(page).to_not have_link("edit-story")
   end
 
 end
