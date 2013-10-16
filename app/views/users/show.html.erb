@@ -3,6 +3,8 @@
 <p><%= @user.email %></p>
 
 <div class="story">
-  <%= link_to "Edit story", edit_user_story_path(@user), :id => "edit-story" %>
+  <%= link_to_if this_user_is_logged_in?, 
+        "Edit story", edit_user_story_path(@user), 
+        :id => "edit-story" %>
   <p>I'm supporting All-In To Fight Cancer.</p>
 </div>

@@ -15,7 +15,6 @@ describe "Editing a story" do
 
   it "should have a link to edit the user's story" do
     click_link "Profile"
-    save_and_open_page
     expect(page).to have_link("edit-story")
   end
 
