@@ -28,6 +28,7 @@ describe "Editing a story" do
     click_link "Profile"
     click_link("edit-story")
     expect(page).to have_content("Edit your story")
+    save_and_open_page
   end
 
 end
