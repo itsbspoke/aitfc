@@ -24,6 +24,12 @@ describe "Editing a story" do
     expect(page).to_not have_link("edit-story")
   end
 
+  it "should allow me to click the edit link" do
+    click_link "Profile"
+    click_link("edit-story")
+    expect(page).to have_content("Edit your story")
+  end
+
 end
 
 
