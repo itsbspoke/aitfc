@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-  before_action :set_story, only: [:show, :update, :destroy]
+  before_action :set_story, only: [:show, :destroy]
 
   # GET /stories
   # GET /stories.json
@@ -38,12 +38,12 @@ class StoriesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /stories/1
-  # PATCH/PUT /stories/1.json
+  # PUT /users/24/story
   def update
+    @story = current_user.story
     respond_to do |format|
       if @story.update(story_params)
-        format.html { redirect_to @story, notice: 'Story was successfully updated.' }
+        format.html { redirect_to user_path(current_user), notice: 'Story was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
