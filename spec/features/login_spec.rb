@@ -50,7 +50,6 @@ describe "Logging in" do
   context "in error cases" do
 
     it "should not allow a login" do
-      User.destroy_all
       signup("jim@jimvanfleet.com")
       logout
       visit root_path

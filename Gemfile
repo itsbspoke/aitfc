@@ -52,7 +52,7 @@ gem "anjlab-bootstrap-rails", require: "bootstrap-rails", github: "anjlab/bootst
 
 gem "omniauth"
 gem 'omniauth-twitter'
-
+gem 'omniauth-facebook', '1.4.0'
 group :development, :test do
   gem "rspec-rails", "2.13.0"
   gem "pry"
@@ -69,6 +69,7 @@ group :test do
   gem "factory_girl_rails", "4.1.0"
   gem "forgery"
   gem "launchy"
+  gem "database_cleaner"
 end
 
 gem "codeclimate-test-reporter", group: :test, require: nil

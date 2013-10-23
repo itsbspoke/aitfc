@@ -1,4 +1,6 @@
 Aitfc::Application.routes.draw do
+  resources :authentications
+
   get "welcome/index"
   root to: "events#index"
 
@@ -10,6 +12,10 @@ Aitfc::Application.routes.draw do
 
   devise_for :users
   resources :users
+
+  match 'auth/:provider/callback', to: 'authentications#create', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
