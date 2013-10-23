@@ -49,6 +49,10 @@ gem "unicorn"
 gem "foreman"
 gem "devise"
 gem "anjlab-bootstrap-rails", require: "bootstrap-rails", github: "anjlab/bootstrap-rails"
+
+gem "omniauth"
+gem 'omniauth-twitter'
+
 group :development, :test do
   gem "rspec-rails", "2.13.0"
   gem "pry"
