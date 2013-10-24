@@ -16,4 +16,9 @@ class Authentication < ActiveRecord::Base
     end
   end
 
+  def self.find_by_oauth_hash(oauth_hash)
+    Authentication.where(provider: oauth_hash[:provider]).
+      where(uid: oauth_hash[:uid]).first
+  end
+
 end
