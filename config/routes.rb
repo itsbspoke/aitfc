@@ -3,7 +3,11 @@ Aitfc::Application.routes.draw do
   get "welcome/index"
   root to: "events#index"
 
+  resources :authentications
   resources :events
+
+  match 'auth/:provider/callback', to: 'authentications#create', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
 
   devise_for :users
   resources :users do

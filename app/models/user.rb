@@ -4,6 +4,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :authentications
+
+  def twitter_client
+    authentications.where(provider: "twitter").first.twitter_client
+  end
+
   has_one :story
 
   before_create :ensure_story_exists

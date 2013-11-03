@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20131016224402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "authentications", force: true do |t|
     t.integer  "user_id"
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 20131016224402) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "oauth_token_secret"
   end
 
   create_table "events", force: true do |t|
