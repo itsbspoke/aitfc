@@ -2,11 +2,12 @@
 
 FactoryGirl.define do
   factory :authentication do
-    user_id 1
-    provider "MyString"
-    uid "MyString"
-    index "MyString"
-    create "MyString"
-    destroy "MyString"
+    user
+    provider "facebook"
+    uid "12345678"
+    name "Facebook user"
+    oauth_token { SecureRandom.hex(64) }
+    oauth_expires_at { 2.months.from_now }
   end
 end
+
