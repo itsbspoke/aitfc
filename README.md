@@ -11,6 +11,16 @@ Academy](http://www.launchpadcodeacademy.com/) to demonstrate effective
 professional software engineering habits and techniques.
 
 
+Our [Edit Story pull request](https://github.com/itsbspoke/aitfc/pull/8) covered
+a lot of basic Rails competencies.  We created a model, and updated that model
+via the web.
+
+Our [Social Media integration pull request](https://github.com/itsbspoke/aitfc/pull/9)
+covered the introduction of Omniauth to handle attaching third-party credentials
+to an account.
+
+Our next pull request will cover using background processes using Sidekiq!
+
 Coverage:
 =========
 
