@@ -1,11 +1,14 @@
 Aitfc::Application.routes.draw do
+
   get "welcome/index"
   root to: "events#index"
 
   resources :events
 
   devise_for :users
-  resources :users
+  resources :users do
+    resource :story
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
