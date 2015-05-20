@@ -59,7 +59,6 @@ group :development, :test do
   gem "rspec-rails", "2.13.0"
   gem "pry"
   gem "pry-rails"
-  gem "pry-debugger"
   gem "pry-awesome_print"
   gem "guard-rspec"
   gem "guard-bundler"
