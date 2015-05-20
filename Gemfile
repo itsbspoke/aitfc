@@ -71,6 +71,7 @@ group :test do
   gem "forgery"
   gem "launchy"
   gem "database_cleaner"
+  gem "rspec_junit_formatter"
 end
 
 gem "codeclimate-test-reporter", group: :test, require: nil
